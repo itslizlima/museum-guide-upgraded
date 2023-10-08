@@ -1,0 +1,161 @@
+<!doctype html>
+<html amp lang="pt-BR">
+   <head>
+      <meta charset="utf-8">
+      <script async src="https://cdn.ampproject.org/v0.js"></script>
+      <title>Pink Palace</title>
+      <link rel="canonical" href="https://endereco-da-pagina.html">
+      <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+      <title>Pink Palace</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+  </head>
+  <body>
+      <main>
+          <section class="container">
+          <div class="img">
+              <img src="images\logo.svg" alt="pink">
+          </div>
+          </section> 
+          <div id="main">
+              <h1>Pink Palace</h1>
+              <h2>Palais Rose </h2> 
+              <h3>Bienvenue dans l’audioguide!</h3>      
+          </div>
+      </main>
+      <div id="video">
+          
+        <video width="100%" muted="" autoplay="" loop="" playsinline="" data-object-fit="cover" data-autoplay="true" class="">
+ 
+          <source src="https://player.vimeo.com/progressive_redirect/playback/864104527/rendition/1080p/file.mp4?loc=external&amp;signature=86db9cedc73d358d705b21cf39973ad25242879992a9eb66172a784ee9860c00" type="video/mp4" class="">
+       
+          O seu browser não suporta a etiqueta de vídeo HTML5.
+        </video>
+      </div>
+  
+          <div id="fones">
+              <p>Pour une expérience optimale, veuillez utiliser des écouteurs.</p>
+              <img src="images\fones.png" width="100px" height="100px" id="headphone" alt="fones">     
+          </div>
+          
+          
+          <div class="banner">
+              <img src="C:\Users\Victor\Desktop\audioguide\images\cheers.webp" height="300px" width="350px"  id="trackImage" >  
+                 <span id="musicName"></span>
+            </div>
+            
+  
+      <div id="audioPlayer">
+          <audio id="audioElement" controls>
+          <source src="audios/parte1.mp3">
+          </audio>  
+      </div>
+  
+  
+      <div id="controls">
+          <button id="btnRewind">Avant</button>
+          <button id="btnNext">Suivant</button>
+      </div>
+      
+  
+      <script>
+          const audioElement = document.getElementById("audioElement");
+          const btnRewind = document.getElementById("btnRewind");
+          const musicName = document.getElementById("musicName");
+          const btnNext = document.getElementById("btnNext");
+          const trackImage = document.getElementById("trackImage");
+  
+          const playlist = [
+              {
+                  audio: "audios/parte1.mp3",
+                  image: "images/room1.jpg",
+                  name: "BIENVENUE AU PALAIS ROSE!"
+                  
+              },
+              {
+                  audio: "audios/parte2.mp3",
+                  image: "images/room2.jpg",
+                  name: "ROSE C'EST UN VIN AVEC UNE COULEUR QUE SE SITUE QUELQUE PART ENTRE LE BLANC ET LE ROUGE."
+              },
+              {
+                  audio: "audios/parte3.mp3",
+                  image: "images/room3.jpg",
+                  name: "IL Y A PRÈS DE 140 TEINTS ET NUANCES DE ROSE DIFFÉRENTS."
+              },
+              {
+                  audio: "audios/parte4.mp3",
+                  image: "images/room4.jpg",
+                  name: "COMMENT PRODUIRE VIN."
+              },
+              {
+                  audio: "audios/parte5.mp3",
+                  image: "images/room5.jpg",
+                  name: "LES MÉTHODES DE PRODUCTION LES PLUS COMMUNS"
+              },
+              {
+                  audio: "audios/parte6.mp3",
+                  image: "images/pink-main.jpg",
+                  name: "LES MÉTHODES DE PRODUCTION LES PLUS COMMUNS"
+              },
+       
+          ];
+  
+          let currentTrackIndex = 0;
+          let isPlaying = false;
+  
+          function loadTrack(index) {
+              const track = playlist[index];
+              audioElement.src = track.audio;
+              audioElement.load();
+              trackImage.src = track.image;
+              musicName.innerHTML = playlist[index].name;
+          }
+  
+          loadTrack(currentTrackIndex);
+  
+        
+          btnRewind.addEventListener("click", function() {
+              if (currentTrackIndex > 0) {
+                  currentTrackIndex--;
+                  loadTrack(currentTrackIndex);
+                  if (isPlaying) {
+                      audioElement.play();
+                  }
+              }
+  
+          });
+  
+          btnNext.addEventListener("click", function() {
+              if (currentTrackIndex < playlist.length - 1) {
+                  currentTrackIndex++;
+                  loadTrack(currentTrackIndex);
+                  if (isPlaying) {
+                      audioElement.play();
+                  }
+              }
+          });
+  
+          audioElement.addEventListener("ended", function() {
+              
+              if (currentTrackIndex < playlist.length - 1) {
+                  currentTrackIndex++;
+                  loadTrack(currentTrackIndex);
+                  if (isPlaying) {
+                      audioElement.play();
+                  }
+              } else {
+                  isPlaying = false;
+              }
+          });
+  
+   
+   
+              
+      </script>
+  </body>
+  <footer>
+      <p>&copy; 2023 Pink Palace Musée. Tous droits réservés.</p>
+  </footer>
+  </html>
