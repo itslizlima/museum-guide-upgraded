@@ -2,9 +2,9 @@
     height: 100%;
     font-family: 'Open Sans', sans-serif;
     color: rgb(0, 0, 0) ;
-    background: linear-gradient(53deg,#f982c2, #ec7cb4,#f597ae,#f1b2b3,#ff9fc1);
+    background: linear-gradient(53deg,#e2c4d4, #efced5,#f597ae,#f1b2b3,#ecacc3);
     background-size: 300% 300%;
-    animation: gradient-animation 15s ease infinite;
+    animation: gradient-animation 10s ease infinite;
 }
 
 @keyframes gradient-animation {
@@ -21,19 +21,92 @@
     
   }
   .cabeçalho{
-    background-color: honeydew;
+    background-color: white;
     height: 80px;
-    text-align:  center;
+    align-content: space-between;
     margin-bottom: 6%;
+    
   }
   .cabeçalho #wow{
-   align-items: center;
-   justify-content: center;
-   margin: auto 0;
-   padding-top: 3%;
+   align-content: space-evenly;
+   padding-top: 5%;
    padding-bottom: 2%;
  
   }
+
+  .cabeçalho #menu{
+    background-image: url(images/translate.jpg);
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    padding-top: 0%;
+    position: absolute;
+    margin-left: 58%;
+    margin-top: 4%;
+    border-color: #66666651;
+    border-width: 1px;
+    box-shadow: 3px 3px 3px #201f1f62
+              -3px -3px 3px #3b3939;
+    font-size: x-small;
+    border-radius: 30%;
+
+    
+  }
+
+  .btn-pt{
+    background-image: url(images/portugal.jpg);
+    background-size: contain;
+    width: 15px; 
+    height: 30px; 
+    text-align: end; 
+    color: #1f1717; 
+    font-size: 0px; 
+    border: none;
+    cursor: pointer;
+    margin-top: 5%;
+    text-align-last: auto;
+    float: left;
+
+  }
+ 
+  .btn-es{
+    background-image: url(images/spain.jpg);
+    background-size: cover;
+    width: 15px; 
+    height: 30px; 
+    text-align: end; 
+    color: #1f1717; 
+    font-size: 0px; 
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-fr{
+    background-image: url(images/france.jpg);
+    background-size: contain;
+    width: 15px; 
+    height: 30px; 
+    text-align: end; 
+    color: #1f1717; 
+    font-size: 0px; 
+    border: none;
+    cursor: pointer;
+  }
+   
+   #hidden-buttons {
+    display: none;
+    margin-left: 75%;
+    font-display: column;
+    
+   }
+
+  .hidden-buttons button {
+    width: 50px;
+    margin: 3px 0; 
+    margin-top: 19%;
+    margin-left: 32%;
+}
+
   .container{
     width: 150px;
     justify-content: center;
@@ -52,6 +125,7 @@
     align-items: center;
     margin: 0 auto;
     cursor: auto;
+   
     
   
   }
@@ -62,7 +136,8 @@
     align-items: center;
     margin: 0 auto;
     cursor: auto;
-    border-radius: 55%;
+    border-radius: 55.5%;
+    box-shadow: #3d3c3c6f 3px 7px 5px;
   }
 #main {
     text-align: center;
@@ -78,7 +153,7 @@
 
 #main h1{
     font-weight: 400;
-    font-family:'Lato';
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font: 70px 'Open Sans';
     color: #dc2484;
     justify-content: center;
@@ -88,32 +163,17 @@
     padding-top: 3%;
     cursor: auto;
     
+    
    
 }
-#main h2{
-    text-align: center;
-    font: 30px 'Indie Flower';
-    font-style: italic;
-    color: #ffff;
-    justify-content: right;
-    padding-left: 30%;
-    display: block;
-    margin: 0 auto;
-    margin-top: -2.5%;
-    padding-bottom: 17%;
-    cursor: auto;
-    text-anchor: middle;
-    
-}
+
 #main h3{
 
     color: rgb(255, 241, 243);
     font: 'Open Sans';
     font-style: italic;
     font-size: 25px;
-    font-weight: 200;
-    justify-content: center;
-    align-items: center;  
+    font-weight: 200; 
     display: block;
     margin: 0 auto;
     padding-top: 4%;
@@ -123,9 +183,8 @@
     background: rgba(255, 255, 255, 0.11);
     border-radius: 1px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(2.8px);
-    -webkit-backdrop-filter: blur(2.8px);
     border: 1px solid rgba(255, 255, 255, 0.22);
+    margin-top: 17%;
 
 }
 #fones {
@@ -137,7 +196,7 @@
     -webkit-backdrop-filter: blur(2.8px);
     border: 1px solid rgba(255, 255, 255, 0.22);
     margin-bottom: 20%;
-    
+    box-shadow: #3d3c3c18 3px 7px 5px;
 }
 
 #fones p{
@@ -161,9 +220,7 @@
     height: 250px;
     background: linear-gradient(10deg, rgb(240, 201, 223) 0%, rgba(255, 111, 149, 0.628) 100%);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10.5px);
-    -webkit-backdrop-filter: blur(10.5px);
+    box-shadow: 0 10px 35px rgba(16, 16, 16, 0.42);
     border: 1px solid rgba(255, 255, 255, 0.3);
     margin: 0 auto;
     padding-top: 6%;
@@ -171,7 +228,7 @@
     cursor: auto;
     align-content: center;
     text-align:justify;
-    margin-bottom: 15%;
+    
     
 
 }
@@ -198,7 +255,7 @@
     align-items: center;
     justify-content: center;
     background-color: #fffcfcfd;
-    margin-bottom: 20%;
+    margin-bottom: 15%;
 }
 
 #audioElement{
@@ -210,7 +267,7 @@
     padding-top: 10%;
     padding-bottom: 5%;
     color: white;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 #audioPlayer div{
@@ -230,9 +287,14 @@
     padding-bottom 10px;
     text-align: center;
     margin-bottom: 6%;
+    padding-top: 0%;
     
 }
+.music {
 
+  background-color: #a3ddf800;
+  background-size: 10px;
+}
 
 #musicName {
   
@@ -240,13 +302,14 @@
     white-space: wrap;
     overflow-wrap: break-word;
     color: #ffffff;
-    font-weight: lighter;
-    font-size: medium;
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: auto 0;
-    margin-top: 2%;
-    text-justify: distribute-all-lines;
+    margin-top: 12%;
+    text-wrap: pretty;
     text-align: center;
-    margin-bottom: 7%;
+    margin-bottom: 10%;
+   
 }
 
 #btnRewind {
@@ -255,20 +318,22 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
-    color: #090909;
+    color: #742537;
     padding: 0.7em 1.7em;
     font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-radius: 0.5em;
     background: #e8e8e8;
-    border: 1px solid #ff6464;
-    box-shadow: 3px 3px 5px #c5c5c5,
-               -3px -3px 5px #ffffff;
+    border: 1px solid #fcadad;
+    box-shadow: 3px 3px 3px #201f1f62,
+               -3px -3px 3px #f8b9c8;
+    inline-size: 43%;
   }
   
   #btnRewind:active {
     color: #666;
     box-shadow: inset 3px 3px 2px #c5c5c5,
-               inset -3px -3px 2px #ffffff;
+               inset -3px -3px 2px #eeacac;
   }
   
   #btnRewind:before {
@@ -279,7 +344,7 @@
     top: 100%;
     width: 140%;
     height: 180%;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(27, 27, 27, 0.05);
     border-radius: 50%;
     display: block;
     transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
@@ -325,14 +390,16 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
-    color: #090909;
+    color: #742537;
     padding: 0.7em 1.7em;
     font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-radius: 0.5em;
     background: #e8e8e8;
-    border: 1px solid #ff6464;
-    box-shadow: 3px 3px 5px #c5c5c5,
-               -3px -3px 5px #ffffff;
+    border: 1px solid #fcadad;
+    box-shadow: 3px 3px 3px #201f1f62,
+               -3px -3px 3px #f8b9c8;
+    inline-size: 43%;
   }
   
   #btnNext:active {

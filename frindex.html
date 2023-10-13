@@ -23,8 +23,8 @@
                 <button class="btn-es" onclick="redirect('esindex.html')">.</button>
         </div>
     
-    
         </div>
+
     </header>
       <main>
           <section class="container">
@@ -34,8 +34,8 @@
           </section> 
           <div id="main">
               <h1>Pink Palace</h1>
-              
-              <h3>Bem vindos ao áudio guia!</h3>      
+
+              <h3>Bienvenue dans l’audioguide!</h3>      
           </div>
       </main>
       <div id="video">
@@ -48,7 +48,7 @@
       </div>
   
           <div id="fones">
-              <p>Para uma melhor experiência, use fones de ouvido.</p>
+              <p>Pour une expérience optimale, veuillez utiliser des écouteurs.</p>
           </div>
           
           <div class="music">
@@ -68,8 +68,8 @@
   
   
       <div id="controls">
-          <button id="btnRewind">VOLTAR</button>
-          <button id="btnNext">AVANÇAR</button>
+          <button id="btnRewind">PRÉCÉDENT</button>
+          <button id="btnNext">SUIVANT</button>
       </div>
       
   
@@ -82,35 +82,35 @@
   
           const playlist = [
               {
-                  audio: "audios/parte1pt.mp3",
+                  audio: "audios/parte1.mp3",
                   image: "images/room1.jpg",
-                  name: "BEM VINDOS AO PINK PALACE!"
+                  name: "BIENVENUE AU PALAIS ROSE!"
                   
               },
               {
-                  audio: "audios/parte2pt.mp3",
+                  audio: "audios/parte2.mp3",
                   image: "images/room2.jpg",
-                  name: "O QUE É O ROSÉ? "
+                  name: "ROSE C'EST UN VIN AVEC UNE COULEUR QUE SE SITUE QUELQUE PART ENTRE LE BLANC ET LE ROUGE."
               },
               {
-                  audio: "audios/parte3pt.mp3",
+                  audio: "audios/parte3.mp3",
                   image: "images/room3.jpg",
-                  name: "EXISTEM MAIS DE 140 TONS E TONALIDADE DIFERENTES DE ROSÉ."
+                  name: "IL Y A PRÈS DE 140 TEINTS ET NUANCES DE ROSE DIFFÉRENTS."
               },
               {
-                  audio: "audios/parte4pt.mp3",
+                  audio: "audios/parte4.mp3",
                   image: "images/room4.jpg",
-                  name: "COMO FAZER O VINHO."
+                  name: "COMMENT PRODUIRE VIN."
               },
               {
-                  audio: "audios/parte5pt.mp3",
+                  audio: "audios/parte5.mp3",
                   image: "images/room5.jpg",
-                  name: "MÉTODOS DE PRODUÇÃO MAIS COMUNS."
+                  name: "LES MÉTHODES DE PRODUCTION LES PLUS COMMUNS"
               },
               {
-                  audio: "audios/parte6pt.mp3",
+                  audio: "audios/parte6.mp3",
                   image: "images/pink-main.jpg",
-                  name: "MACERAÇÃO"
+                  name:  "MACÉRATION"
               },
        
           ];
@@ -163,6 +163,7 @@
               }
           });
   
+   
           function toggleMenu() {
             var menu = document.getElementById("hidden-buttons");
             if (menu.style.display === "none" || menu.style.display === "") {
@@ -174,10 +175,10 @@
          function redirect(page) {
             window.location.href = page;
          }
-              
+
       </script>
   </body>
   <footer>
-      <p>&copy; 2023 Pink Palace Museu. Todos os direitos reservados.</p>
+      <p>&copy; 2023 Pink Palace Musée. Tous droits réservés.</p>
   </footer>
   </html>
